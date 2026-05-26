@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heuristic-algorithm-teaching-notebooks"
+version = "0.1.0"
+description = "Teaching-focused heuristic algorithm notebooks with clear visualization and classical experiments."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "seaborn>=0.13",
+  "jupyter>=1.0",
+  "notebook>=7.0",
+  "nbconvert>=7.16",
+  "nbformat>=5.10",
+  "ipykernel>=6.29",
+]
+
+[tool.setuptools]
+include-package-data = true
