@@ -1,21 +1,21 @@
 # Heuristic Algorithm Teaching Notebooks
 
-这是一个面向教学和课堂演示的启发算法实验项目。仓库中的每个算法都对应一个独立的 Jupyter Notebook，内容强调三件事：
+This repository is a heuristic algorithm project designed for teaching and classroom demonstrations. Each algorithm is provided as an independent Jupyter Notebook, with emphasis on three things:
 
-1. 原理要讲清楚
-2. 实验要能跑通
-3. 可视化要足够直观
+1. The underlying idea should be explained clearly.
+2. The experiments should run successfully.
+3. The visualizations should be intuitive enough for teaching.
 
-项目适合以下场景：
+The project is suitable for:
 
-- 课堂授课
-- 算法导论实验
-- 启发算法入门自学
-- 讲座或分享演示
+- classroom instruction
+- introductory algorithm lab courses
+- self-study for heuristic algorithms
+- talks, lectures, or teaching demos
 
-## 项目结构
+## Project Structure
 
-当前项目包含 12 个核心启发算法 Notebook，目录按编号排序，便于按教学顺序展开。
+The project currently includes 12 core heuristic algorithm notebooks. Directories are numbered so they can be taught in a natural sequence.
 
 ```text
 .
@@ -36,103 +36,103 @@
 └── 12_Iterated_Local_Search/
 ```
 
-## 算法清单
+## Algorithm List
 
-### 连续优化与局部搜索
+### Continuous Optimization and Local Search
 
 1. `01_Hill_Climbing`
-   - 爬山算法
-   - 经典案例：Himmelblau 函数
+   Hill Climbing
+   Classic example: Himmelblau function
 2. `02_Random_Restart_Hill_Climbing`
-   - 随机重启爬山算法
-   - 经典案例：Rastrigin 函数
+   Random Restart Hill Climbing
+   Classic example: Rastrigin function
 3. `06_Evolution_Strategy`
-   - 进化策略
-   - 经典案例：Rosenbrock 函数
+   Evolution Strategy
+   Classic example: Rosenbrock function
 4. `07_Differential_Evolution`
-   - 差分进化
-   - 经典案例：Ackley 函数
+   Differential Evolution
+   Classic example: Ackley function
 5. `08_Particle_Swarm_Optimization`
-   - 粒子群优化
-   - 经典案例：Himmelblau 函数
+   Particle Swarm Optimization
+   Classic example: Himmelblau function
 6. `10_Artificial_Bee_Colony`
-   - 人工蜂群算法
-   - 经典案例：Ackley 函数
+   Artificial Bee Colony
+   Classic example: Ackley function
 
-### 组合优化与路径搜索
+### Combinatorial Optimization and Path Search
 
 1. `03_Simulated_Annealing`
-   - 模拟退火
-   - 经典案例：TSP
+   Simulated Annealing
+   Classic example: TSP
 2. `04_Tabu_Search`
-   - 禁忌搜索
-   - 经典案例：TSP
+   Tabu Search
+   Classic example: TSP
 3. `05_Genetic_Algorithm`
-   - 遗传算法
-   - 经典案例：TSP
+   Genetic Algorithm
+   Classic example: TSP
 4. `09_Ant_Colony_Optimization`
-   - 蚁群算法
-   - 经典案例：TSP
+   Ant Colony Optimization
+   Classic example: TSP
 5. `11_GRASP`
-   - 贪心随机自适应搜索
-   - 经典案例：TSP
+   Greedy Randomized Adaptive Search Procedure
+   Classic example: TSP
 6. `12_Iterated_Local_Search`
-   - 迭代局部搜索
-   - 经典案例：TSP
+   Iterated Local Search
+   Classic example: TSP
 
-## 每个 Notebook 的统一结构
+## Shared Notebook Structure
 
-每个 Notebook 基本都按同样的教学结构组织：
+Most notebooks follow the same teaching structure:
 
-1. 教学目标
-2. 为什么选这个经典案例
-3. 算法直觉
-4. 从零实现
-5. 单次实验演示
-6. 可视化结果
-7. 多次运行统计
-8. 参数敏感性分析
-9. 课堂总结
+1. Learning objectives
+2. Why this classic example was chosen
+3. Algorithm intuition
+4. From-scratch implementation
+5. Single-run demonstration
+6. Visualization of results
+7. Statistics over multiple runs
+8. Parameter sensitivity analysis
+9. Classroom summary
 
-这样做的目的是让学生在切换算法时，不需要重新适应阅读方式。
+The purpose is to let students switch between algorithms without having to adapt to a new reading pattern each time.
 
-## 环境准备
+## Environment Setup
 
-建议使用 Python 3.11 或更高版本。
+Python 3.11 or later is recommended.
 
-### 使用 `pyproject.toml` 安装
+### Install with `pyproject.toml`
 
-如果你使用支持 `pyproject.toml` 的工具，可以直接按其中依赖安装。
+If you use a toolchain that supports `pyproject.toml`, you can install dependencies from it directly.
 
-例如使用 `pip`：
+For example, with `pip`:
 
 ```bash
 pip install -e .
 ```
 
-或者直接安装核心依赖：
+Or install the core dependencies directly:
 
 ```bash
 pip install numpy pandas matplotlib seaborn jupyter nbconvert nbformat ipykernel
 ```
 
-## 如何运行 Notebook
+## Running the Notebooks
 
-### 启动 Jupyter
+### Start Jupyter
 
 ```bash
 jupyter notebook
 ```
 
-或：
+or:
 
 ```bash
 jupyter lab
 ```
 
-### 运行顺序建议
+### Suggested Teaching Order
 
-如果用于授课，建议按下面顺序讲，会更容易建立学生的算法直觉：
+If you plan to use this for teaching, the following order is recommended because it builds algorithm intuition more naturally:
 
 1. `01_Hill_Climbing`
 2. `02_Random_Restart_Hill_Climbing`
@@ -147,65 +147,65 @@ jupyter lab
 11. `11_GRASP`
 12. `12_Iterated_Local_Search`
 
-这个顺序的思路是：
+The logic behind this order is:
 
-- 先从最直观的局部搜索开始
-- 再进入允许跳出局部最优的策略
-- 然后过渡到种群类和群体智能类方法
-- 最后总结构造式与迭代改进式方法
+- start with the most intuitive local search methods
+- then move to strategies that can escape local optima
+- transition into population-based and swarm-intelligence methods
+- finish with constructive and iterative-improvement approaches
 
-## 讲课建议
+## Teaching Suggestions
 
-如果你下个月要讲课，建议每个 Notebook 至少抓住下面几个问题去讲：
+If you are using these notebooks for a course or lecture, each notebook should at least address the following questions:
 
-1. 这个算法的“搜索动作”是什么
-2. 它为什么能改进当前解
-3. 它为什么可能失败
-4. 它如何平衡探索和利用
-5. 它最重要的参数控制了什么
+1. What is the algorithm's core search move?
+2. Why can it improve the current solution?
+3. Why can it fail?
+4. How does it balance exploration and exploitation?
+5. Which parameter matters most, and what does it control?
 
-### 连续优化类重点
+### Focus Points for Continuous Optimization
 
-连续优化类 Notebook 建议重点看：
+For continuous optimization notebooks, it is recommended to pay special attention to:
 
-- 等高线图上的搜索轨迹
-- 群体分布如何演化
-- 收敛曲线下降速度
+- search trajectories on contour plots
+- how the population distribution evolves
+- the rate at which convergence curves decrease
 
-### TSP 类重点
+### Focus Points for TSP Notebooks
 
-TSP 类 Notebook 建议重点看：
+For TSP notebooks, it is recommended to pay special attention to:
 
-- 初始路径和最终路径的差异
-- 中间路径结构如何变化
-- 不同算法生成新路径的方式有什么不同
+- the difference between the initial route and the final route
+- how route structure changes during the process
+- how different algorithms generate new candidate routes
 
-## 可视化说明
+## Visualization Notes
 
-项目中的图表设计重点不是“好看”，而是“讲得清楚”。因此大多数 Notebook 都会至少包含：
+The charts in this project are designed to explain clearly rather than simply look attractive. As a result, most notebooks include at least:
 
-1. 收敛曲线
-2. 搜索过程图
-3. 最终结果图
+1. a convergence curve
+2. a search-process figure
+3. a final-result figure
 
-对于特定算法，还加入了针对性可视化：
+Some algorithms also include targeted visualizations:
 
-- PSO：粒子群位置演化
-- ACO：信息素热力图
-- GA：种群分布或适应度分布
-- SA：接受率变化
-- GRASP / ILS：构造或扰动前后对比
+- PSO: particle position evolution
+- ACO: pheromone heatmap
+- GA: population distribution or fitness distribution
+- SA: acceptance rate changes
+- GRASP / ILS: before-and-after comparisons for construction or perturbation
 
-## 相关文件
+## Related Files
 
-- 项目总设计文档：[PRD_Heuristic_Algorithms.md](./PRD_Heuristic_Algorithms.md)
+- Project-level design document: [PRD_Heuristic_Algorithms.md](./PRD_Heuristic_Algorithms.md)
 
-## 说明
+## Notes
 
-这套内容当前以教学清晰度为优先，代码实现偏“课堂可读”而不是“工业级高性能封装”。如果后续要扩展，可以继续补：
+This material currently prioritizes teaching clarity. The implementations are designed to be readable in class rather than packaged as industrial-grade high-performance code. Possible future extensions include:
 
-- 更多测试函数
-- 更复杂的 TSP 数据
-- 动画版本可视化
-- 参数交互控件
-- 统一导出的课件图
+- more benchmark functions
+- more complex TSP datasets
+- animated visualizations
+- interactive parameter controls
+- a unified export set for lecture slides
